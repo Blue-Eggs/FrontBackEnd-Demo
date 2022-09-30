@@ -3,27 +3,27 @@ from django.http import JsonResponse
 def getRoutes(request):
     routes = [
         {
-            'title': '/DemoMAMA',
+            'title': 'DemoMAMA',
             'method': 'GET',
-            'body': None,
+            'body': 'None',
             'decription': 'Returns an array of notes'
         },
         {
-            'title': '/Demo/id',
+            'title': 'demoID',
             'method': 'GET',
-            'body': None,
+            'body': 'None',
             'decription': 'Returns an array of notes'
         },
         {
-            'title': '/Demo/create/',
+            'title': 'Create',
             'method': 'POST',
-            'body': {'body':""},
+            'body': '',
             'decription': 'Returns an array of notes'
         },
         {
-            'title': '/Demo/id/delete/',
+            'title': 'DemoDel',
             'method': 'DELETE',
-            'body': None,
+            'body': 'None',
             'decription': 'Deletes and exiting note'
         },
     ]

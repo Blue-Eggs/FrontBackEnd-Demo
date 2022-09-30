@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-mds414&43ojw-s5yfzwn3e%2muy7se&x)-$mrj-_hz6^zr_um0
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '10.0.2.2',
-    'localhost',
+   # '10.0.2.2',
+   # 'localhost',
 ]
 
 
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
-    'REST_FRAMEWORK'
+    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
@@ -52,7 +53,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 ROOT_URLCONF = 'Demo.urls'
 
